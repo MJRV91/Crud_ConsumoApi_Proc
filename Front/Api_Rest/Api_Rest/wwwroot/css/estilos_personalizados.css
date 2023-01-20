@@ -1,0 +1,12 @@
+.alert_flotante {
+    display:none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    margin-left: 234px;
+    width: 410px;
+    z-index: 9999;
+}
+.enlace{
+    cursor: pointer;
+}

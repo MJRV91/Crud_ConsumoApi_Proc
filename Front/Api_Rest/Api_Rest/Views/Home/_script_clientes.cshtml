@@ -1,0 +1,150 @@
+﻿<script>
+    $(function () {
+        $('#btn_nuevo').off('click');
+        $("#btn_nuevo").click(function (e) {
+            data_url = ($(this).attr("data-url"));
+            Mostrar_form_nuevo(data_url);
+        });
+        $('#btn_regresar').off('click');
+        $('#btn_regresar').on('click', function () {
+            data_url = ($(this).attr("data-url"));
+            $.get(data_url, {}, function (result) {
+                $("#div_body").html(result).fadeIn(300);
+            }).fail(function () {
+                $("#success-msj").html("Error inesperado al intentar cargar los registros");
+                $("#success-alert").fadeIn(300).delay(3000).slideUp(400);
+            });
+        });
+
+        $('#btn_guardar').off('click');
+        $('#btn_guardar').on('click', function () {
+            data_url =($(this).attr("data-url"));
+            $("#btn_guardar").prop("disabled", true);
+
+            $.ajax({
+                url: data_url,
+                type: "post",
+                data: {
+                    CliNombres: $("#txtNombres").val(),
+                    CliApellidos: $("#txtApellidos").val(),
+                    CliTelefono: $("#txtTelefono").val(),
+                    CliEmail: $("#txtEmail").val(),
+                }
+            }).done(function (data) {
+                if (data[0] >= 0){
+                    $("#warning-msj").html(data[1]);
+                    $("#warning-alert").fadeIn(300).delay(3000).slideUp(400);
+
+                    $("btn_guardar").prop("disabled", false);
+                }
+                else {
+                    $("success-msj").html(data[1]);
+                    $("#success-alert").fadeIn(300).delay(3000).slideUp(400);
+
+                    $("#txtNombres").val("").focus();
+                    $("#txtApellidos").val("");
+                    $("#txtTelefono").val("");
+                    $("#txtEmail").val("");
+
+                    $("#btn_guardar").prop("disabled", false);
+                }
+            }).fail(function (xhr, status, error) {
+                $("#warning-msj").html(data[1]);
+                $("#warning-alert").fadeIn(300).delay(3000).slideUp(400);
+                $("#btn_guardar").prop("disabled", false);
+            });
+        });
+        
+        $('.btn_editar').off('click');
+        $('.btn_editar').on('click', function (result) {
+            data_url = ($(this).attr("data-url"));
+            codigo = $(this).attr("id");
+
+            $.post(data_url, { codigo }, function (result) {
+                $("#div_body").html(result).fadeIn(300);
+            }).fail(function () {
+                $("#success-msj").html("Error inesperado al intentar conectarse con el servidor.");
+                $("#success-alert").fadeIn(300).delay(3000).slideUp(400);
+            });
+        });
+
+        $('#btn_actualizar').off('click');
+        $('#btn_actualizar').on('click', function () {
+            data_url = ($(this).attr("data-url"));
+            $("#btn_actualizar").prop("disabled", true);
+
+            $.ajax({
+                url: data_url,
+                type: "put",
+                data: {
+                    CliCodigo: $("#txtCodigo").val(),
+                    CliNombres: $("#txtNombres").val(),
+                    CliApellidos: $("#txtApellidos").val(),
+                    CliTelefono: $("#txtTelefono").val(),
+                    CliEmail: $("#txtEmail").val(),
+                }
+            }).done(function (data) {
+                if (data[0] >= 0) {
+                    $("#warning-msj").html(data[1]);
+                    $("#warning-alert").fadeIn(300).delay(3000).slideUp(400);
+
+                    $("btn_actualizar").prop("disabled", false);
+                }
+                else {
+                    $("success-msj").html(data[1]);
+                    $("#success-alert").fadeIn(300).delay(3000).slideUp(400);
+
+                    $("#btn_actualizar").prop("disabled", false);
+                }
+            }).fail(function (xhr, status, error) {
+                $("#warning-msj").html("Error inesperado al intentar conectarse con el servidor");
+                $("#warning-alert").fadeIn(300).delay(3000).slideUp(400);
+                $("#btn_actualizar").prop("disabled", false);
+            });
+        });
+
+        $('.btn_eliminar').off('click');
+        $('.btn_eliminar').on('click', function () {
+            data_url = ($(this).attr("data-url"));
+            codigo = $(this).attr("id");
+            
+            if (confirm("¿Está seguro de eliminar este registro")) {
+                $.ajax({
+                    url: data_url,
+                    type: "delete",
+                    data: {
+                        codigoCliente: codigo
+                    }
+                }).done(function (data) {
+                    if (data[0] >= 0) {
+                        $("#warning-msj").html(data[1]);
+                        $("#warning-alert").fadeIn(300).delay(3000).slideUp(400);
+
+                        $("btn_eliminar").prop("disabled", false);
+                    }
+                    else {
+                        $("#fila_" + codigo).remove();
+                        $("success-msj").html(data[1]);
+                        $("#success-alert").fadeIn(300).delay(3000).slideUp(400);
+
+                        $("#btn_eliminar").prop("disabled", false);
+                    }
+                }).fail(function (xhr, status, error) {
+                    $("#warning-msj").html("Error inesperado al intentar conectarse con el servidor");
+                    $("#warning-alert").fadeIn(300).delay(3000).slideUp(400);
+                    $("#btn_eliminar").prop("disabled", false);
+                });
+            }
+            
+        });
+
+        function Mostrar_form_nuevo(data_url) {
+            $.get(data_url, {}, function (result) {
+                $("#div_body").html(result).fadeIn(300);
+            }).fail(function () {
+                $("#success-msj").html("Error inesperado al intentar cargar los registros");
+                $("#success-alert").fadeIn(300).delay(3000).slideUp(400);
+            });
+        }
+    });
+</script>

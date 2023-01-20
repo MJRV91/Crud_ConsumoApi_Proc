@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "d8CulQMGbhGH3X9GAXFfMJn1Ac1Nus3ya83I+N6o3UU=",
+  "Source": "MI_API_REST",
+  "BasePath": "_content/MI_API_REST",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

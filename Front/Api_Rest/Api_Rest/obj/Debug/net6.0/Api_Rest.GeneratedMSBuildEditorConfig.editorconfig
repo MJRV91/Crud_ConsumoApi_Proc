@@ -1,0 +1,57 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Api_Rest
+build_property.RootNamespace = Api_Rest
+build_property.ProjectDir = D:\Estudio\Entrenamiento\Mi_api_rest\Front\Api_Rest\Api_Rest\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Estudio\Entrenamiento\Mi_api_rest\Front\Api_Rest\Api_Rest
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Estudio/Entrenamiento/Mi_api_rest/Front/Api_Rest/Api_Rest/Views/Home/ActualizarCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY3R1YWxpemFyQ2xpZW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Estudio/Entrenamiento/Mi_api_rest/Front/Api_Rest/Api_Rest/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Estudio/Entrenamiento/Mi_api_rest/Front/Api_Rest/Api_Rest/Views/Home/RegistrarCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RyYXJDbGllbnRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Estudio/Entrenamiento/Mi_api_rest/Front/Api_Rest/Api_Rest/Views/Home/_listaClientes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfbGlzdGFDbGllbnRlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Estudio/Entrenamiento/Mi_api_rest/Front/Api_Rest/Api_Rest/Views/Home/_script_clientes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfc2NyaXB0X2NsaWVudGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Estudio/Entrenamiento/Mi_api_rest/Front/Api_Rest/Api_Rest/Views/Shared/_msj_success_warning.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9tc2pfc3VjY2Vzc193YXJuaW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Estudio/Entrenamiento/Mi_api_rest/Front/Api_Rest/Api_Rest/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Estudio/Entrenamiento/Mi_api_rest/Front/Api_Rest/Api_Rest/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Estudio/Entrenamiento/Mi_api_rest/Front/Api_Rest/Api_Rest/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Estudio/Entrenamiento/Mi_api_rest/Front/Api_Rest/Api_Rest/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ewgsl22tab

@@ -1,0 +1,53 @@
+﻿@model ModClieClientes
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ActualizarCliente</title>
+</head>
+<body>
+
+    <div class="card-header">
+        <h3 class="card-title">Actualizar datos del cliente</h3>
+    </div>
+    <div class="card-body">
+        <input asp-for="CliCodigo" id="txtCodigo" type="hidden" />
+        <div class="mb-2">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control form-control-sm" id="txtNombres" asp-for="CliNombres" />
+        </div>
+        <div class="mb-2">
+            <label class="form-label">Apellido</label>
+            <input type="text" class="form-control form-control-sm" id="txtApellidos" asp-for="CliApellidos" />
+        </div>
+        <div class="mb-2">
+            <label class="form-label">Teléfono</label>
+            <input type="text" class="form-control form-control-sm" id="txtTelefono" asp-for="CliTelefono" />
+        </div>
+        <div class="mb-2">
+            <label class="form-label">Correo electrónico</label>
+            <input type="text" class="form-control form-control-sm" id="txtEmail" asp-for="CliEmail" />
+        </div>
+    </div>
+    <div class="card-footer">
+        <button id="btn_regresar" class="btn btn-default btn-sm btn-block"
+                data-url='@Url.Action("Regresar", "Home")'>
+            << Regresar
+        </button>
+
+        <button id="btn_actualizar" class="btn btn-default btn-block"
+                data-url='@Url.Action("ActualizarCliente", "Home")'>
+            Guardar
+        </button>
+    </div>
+</body>
+</html>
+@{
+    await Html.RenderPartialAsync("~/Views/Home/_script_clientes.cshtml");
+}
